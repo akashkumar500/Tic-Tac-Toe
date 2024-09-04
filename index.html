@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Tic Tac Toe</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+    <div class="container" id="home-screen"> 
+        <h1 class="title inactive">Tic Tac Toe</h1> 
+        <div class="mode-selection"> 
+            <button class="mode-button computer" onclick="selectMode('computer')">Play with Computer</button> 
+            <button class="mode-button multiplayer" onclick="selectMode('multiplayer')">Play Multiplayer</button> 
+        </div> 
+        <div class="player-names hidden" id="name-selection"> 
+            <input type="text" id="player1" placeholder="Enter 1st Player Name"> 
+            <input type="text" id="player2" placeholder="Enter 2nd Player Name"> 
+            <div class="symbol-selection"> 
+                <label><input type="radio" name="playerSymbol" value="X" checked> X</label> 
+                <label><input type="radio" name="playerSymbol" value="O"> O</label> 
+            </div> 
+            <button class="start-button" onclick="startGame()">Start Game</button> 
+        </div> 
+    </div> 
+    <div class="container game-screen" id="game-screen"> 
+        <h1 class="title inactive">Tic Tac Toe</h1> 
+        <div class="game-mode" id="gameMode"></div> 
+        <div class="status">
+            Turn: <span id="currentPlayer">Akash</span>
+        </div> 
+        <div class="board"> 
+            <div class="cell" onclick="handleMove(0)"></div> 
+            <div class="cell" onclick="handleMove(1)"></div> 
+            <div class="cell" onclick="handleMove(2)"></div> 
+            <div class="cell" onclick="handleMove(3)"></div> 
+            <div class="cell" onclick="handleMove(4)"></div> 
+            <div class="cell" onclick="handleMove(5)"></div> 
+            <div class="cell" onclick="handleMove(6)"></div> 
+            <div class="cell" onclick="handleMove(7)"></div> 
+            <div class="cell" onclick="handleMove(8)"></div> 
+        </div> 
+        <button class="reset-button" onclick="resetGame()">Reset Game</button> 
+        <button class="go-back-button" onclick="goBack()">Go Back</button> 
+        <p id="message" class="message"></p> 
+    </div> 
+    <div class="created-by">
+        Created By Akash Kumar
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>
